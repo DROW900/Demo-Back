@@ -12,11 +12,11 @@ const corsOption = {
     }
 }
 
-const limiter = rateLimit({
+/* const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 10, // limit each IP to 100 requests per windowMs
     message: 'Usted exedió el limite de accesos a la API'
-  });
+  }); */
 
 const constrolApikey = function (req,res,next) {
     console.log(req.body.apikey)
@@ -32,4 +32,4 @@ const constrolApikey = function (req,res,next) {
     }
 }
 
-  module.exports = {corsOption, limiter, constrolApikey}
+  module.exports = {corsOption, constrolApikey}
